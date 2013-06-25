@@ -1,0 +1,25 @@
+apply {
+	plugin 'java'
+	plugin 'eclipse'
+}
+
+repositories {
+	mavenCentral()
+	maven {
+		url 'http://repository.jboss.org/nexus/content/groups/public'
+		url 'http://repo.springsource.org/release'
+	}
+}
+
+dependencies {
+	//compile 'org.springframework:spring-webmvc:3.2.3.RELEASE'
+	compile 'org.springframework:spring-core:3.2.3.RELEASE'
+	compile 'org.springframework:spring-beans:3.2.3.RELEASE'
+	compile 'org.springframework:spring-context:3.2.3.RELEASE'
+
+	compile 'org.jboss.resteasy:resteasy-spring:3.0.1.Final'
+	compile 'org.jboss.resteasy:resteasy-netty:3.0.1.Final'
+	
+	testCompile 'org.springframework:spring-test:3.2.3.RELEASE'
+	testCompile 'junit:junit:4.7'
+}
